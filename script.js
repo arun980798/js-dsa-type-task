@@ -1,8 +1,15 @@
 
 
-// 8. Print multiplication table of 5
-// Use loop to print 5 × 1 to 5 × 10.
 
-for (let i = 1; i <= 10; i++) {
-  console.log(i * 5);
+// 10. Ask user for password and print access status
+// Hardcoded correct password. Compare with user input.
+
+let hardPass = "harsh";
+
+let currentPass = prompt("Enter your password:");
+
+if (currentPass === null || currentPass === "") {
+  console.log("Please re-enter your password.");
+} else {
+  console.log("Correct password.");
 }
