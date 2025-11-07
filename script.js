@@ -1,15 +1,26 @@
 
 
+// 11. Allow only 3 attempts to enter correct password
+// If user gets it right early, stop. If not → “Account locked”
 
-// 10. Ask user for password and print access status
-// Hardcoded correct password. Compare with user input.
 
-let hardPass = "harsh";
+const pass = "arun";
 
-let currentPass = prompt("Enter your password:");
+let count = 0;
 
-if (currentPass === null || currentPass === "") {
-  console.log("Please re-enter your password.");
+let currentPass = prompt("Enter the password:");
+++count;
+
+if (currentPass === pass) {
+  console.log("Welcome");
 } else {
-  console.log("Correct password.");
+  for (let i = count; i < 3; i++) {
+    currentPass = prompt("Enter the password:");
+    ++count;
+
+    if (currentPass === pass) {
+      console.log("Welcome");
+      break;
+    }
+  }
 }
