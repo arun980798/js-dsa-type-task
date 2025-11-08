@@ -1,15 +1,31 @@
 
 
+// 15. Keep asking number until user enters an even number
+// Use while loop. Stop only if input is even.
 
-// 14. Sum of all odd numbers from 1 to 30
-// Add only odd numbers. Print final sum.
 
-let total = 0
-for (let i = 0; i <= 30; i++) {
-  if (i % 2 !== 0) {
-    total += i;
+let con = true;
+let num = null;
+
+
+
+
+
+while (con) {
+
+  num = prompt("give the number");
+
+  if (num === null || num === undefined || num === "") {
+    continue
   }
+
+  num = num.trim();
+  if (num % 2 === 0) {
+    console.log(`number is ${num}`);
+    con = false;
+  }
+
+
 
 }
 
-console.log(total)
