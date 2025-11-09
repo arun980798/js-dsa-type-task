@@ -1,21 +1,28 @@
 
 
 
-// 18. Ask user 5 numbers. Count how many are positive
-// Use loop + condition + counter.
- 
-let count = 0;
-let num = null;
 
-for (let i = 0; i < 5; i++) {
-  num = prompt("Enter a positive or negative number:");
-  if (num < 0) {
-    count++;
-  }
+// 19. ATM Simulator – Allow 3 withdrawals
+// Start with ₹1000 balance. Ask withdrawal amount 3 times.
+// If enough balance → deduct
+// Else → print “Insufficient balance”
+
+
+
+
+let balance = 1000 ;
+let count = 0 ;
+let withdrawal = null;
+
+for(let i = 0 ;i<3;i++){
+ withdrawal= prompt("give withdrawal ammount :");
+ if(balance > withdrawal){
+  balance = balance -withdrawal;
+  console.log(balance)
+ }
+ else{
+  console.log(`insufficient balance`)
+  console.log(`your balance is :${balance}`)
+  break;
+ }
 }
-
-console.log(`Your number of positive numbers is: ${count}`);
-
-
-
-
