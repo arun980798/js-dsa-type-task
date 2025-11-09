@@ -1,31 +1,36 @@
 
 
-// 15. Keep asking number until user enters an even number
-// Use while loop. Stop only if input is even.
-
-
-let con = true;
-let num = null;
 
 
 
-
-
-while (con) {
-
-  num = prompt("give the number");
-
-  if (num === null || num === undefined || num === "") {
-    continue
-  }
-
-  num = num.trim();
-  if (num % 2 === 0) {
-    console.log(`number is ${num}`);
-    con = false;
-  }
+// 16. Print numbers between two user inputs
+// Input start and end using prompt() → print all between.
 
 
 
+
+
+
+let startPoint = prompt("starting point");
+let endPoint = prompt("end point");
+
+
+if (startPoint === null || startPoint === undefined || endPoint === null || endPoint === undefined || startPoint === "" || endPoint === "") {
+  console.error("plese enter the valid input")
 }
-
+else {
+  +startPoint;
+  +endPoint
+  if (isNaN(startPoint) || isNaN(endPoint)) {
+    console.error("plese enter the valid input")
+  }
+  else if (startPoint > endPoint) {
+    console.error("plese enter the valid input")
+  }
+  else {
+    while (startPoint <= endPoint) {
+      console.log(startPoint);
+      ++startPoint;
+    }
+  }
+}

@@ -72,9 +72,7 @@ console.log(count)
 // Hardcoded correct password. Compare with user input.
 
 let hardPass = "harsh";
-
 let currentPass = prompt("Enter your password:");
-
 if (currentPass === null || currentPass === "") {
   console.log("Please re-enter your password.");
 } else {
@@ -94,12 +92,9 @@ if (currentPass === null || currentPass === "") {
 
 
 const pass = "arun";
-
 let count = 0;
-
 let currentPass = prompt("Enter the password:");
 ++count;
-
 if (currentPass === pass) {
   console.log("Welcome");
 } else {
@@ -132,7 +127,6 @@ let count = 0
 let word = prompt("give your words ");
 con = word.includes("stop")
 count++
-
 while (!con) {
   word = prompt("give your words ");
   count++
@@ -186,7 +180,107 @@ for (let i = 0; i <= 30; i++) {
   if (i % 2 !== 0) {
     total += i;
   }
+}
+console.log(total)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 15. Keep asking number until user enters an even number
+// Use while loop. Stop only if input is even.
+
+
+let con = true;
+let num = null;
+while (con) {
+  num = prompt("give the number");
+  if (num === null || num === undefined || num === "") {
+    continue
+  }
+  num = num.trim();
+  if (num % 2 === 0) {
+    console.log(`number is ${num}`);
+    con = false;
+  }
+
+
 
 }
 
-console.log(total)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 16. Print numbers between two user inputs
+// Input start and end using prompt() → print all between.
+
+
+
+
+
+
+let startPoint = prompt("starting point");
+let endPoint = prompt("end point");
+
+
+if (startPoint === null || startPoint === undefined || endPoint === null || endPoint === undefined || startPoint === "" || endPoint === "") {
+  console.error("plese enter the valid input")
+}
+else {
+  +startPoint;
+  +endPoint
+  if (isNaN(startPoint) || isNaN(endPoint)) {
+    console.error("plese enter the valid input")
+  }
+  else if (startPoint > endPoint) {
+    console.error("plese enter the valid input")
+  }
+  else {
+    while (startPoint <= endPoint) {
+      console.log(startPoint);
+      ++startPoint;
+    }
+  }
+}
+
+
+
+
+
+
