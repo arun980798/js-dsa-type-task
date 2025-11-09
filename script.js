@@ -1,15 +1,21 @@
 
 
 
-
-// 17. Print only first 3 odd numbers from 1 to 20
-// Use loop. Stop with break after 3 odd prints.
-
+// 18. Ask user 5 numbers. Count how many are positive
+// Use loop + condition + counter.
+ 
 let count = 0;
-for (let i = 0; i <= 20; i++) {
-  if (i % 2 !== 0) {
-    console.log(i);
+let num = null;
+
+for (let i = 0; i < 5; i++) {
+  num = prompt("Enter a positive or negative number:");
+  if (num < 0) {
     count++;
   }
-  if (count === 3) break;
 }
+
+console.log(`Your number of positive numbers is: ${count}`);
+
+
+
+
