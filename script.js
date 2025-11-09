@@ -2,35 +2,14 @@
 
 
 
+// 17. Print only first 3 odd numbers from 1 to 20
+// Use loop. Stop with break after 3 odd prints.
 
-// 16. Print numbers between two user inputs
-// Input start and end using prompt() → print all between.
-
-
-
-
-
-
-let startPoint = prompt("starting point");
-let endPoint = prompt("end point");
-
-
-if (startPoint === null || startPoint === undefined || endPoint === null || endPoint === undefined || startPoint === "" || endPoint === "") {
-  console.error("plese enter the valid input")
-}
-else {
-  +startPoint;
-  +endPoint
-  if (isNaN(startPoint) || isNaN(endPoint)) {
-    console.error("plese enter the valid input")
+let count = 0;
+for (let i = 0; i <= 20; i++) {
+  if (i % 2 !== 0) {
+    console.log(i);
+    count++;
   }
-  else if (startPoint > endPoint) {
-    console.error("plese enter the valid input")
-  }
-  else {
-    while (startPoint <= endPoint) {
-      console.log(startPoint);
-      ++startPoint;
-    }
-  }
+  if (count === 3) break;
 }
